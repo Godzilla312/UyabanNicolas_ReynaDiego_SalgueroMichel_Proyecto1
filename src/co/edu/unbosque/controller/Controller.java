@@ -36,21 +36,21 @@ public class Controller {
 			ciclo2: while(true) {
 				
 				int op = sc.nextInt();
-				
 				switch(op) {
 				
 				case 1:{
-					
-					System.out.println("Ingrese el tipo de vehiculo (camioneta, automovil, moto");
+				
+					System.out.println("Ingrese el tipo de vehiculo (camioneta, automovil, moto)");
+					sc.nextLine();
 					String tipo = sc.nextLine();
-					sc.next();
+					
+					
 					
 					System.out.println("Ingrese la placa del vehiculo (AAA 000)");
 					String placa = sc.nextLine();
-					sc.next();
+
 					System.out.println("Ingrese la hora de ingreso (formato 24 horas -> 15 00)");
 					String horaEntrada = sc.nextLine();
-					sc.next();
 					
 					System.out.println(v.ingresar(tipo, placa, horaEntrada));
 					break ciclo2;
@@ -62,16 +62,18 @@ public class Controller {
 				}		
 				
 				case 3:{
+					sc.nextLine();
 					System.out.println("Ingrese la placa del vehiculo que desea ver (AAA 000)");
 					String placa = sc.nextLine();
-					sc.next();
+
 					
-					System.out.println(v.mostrarVehiculo(placa).toString());
+					System.out.println(v.mostrarVehiculo(placa));
 				
 					break ciclo2;
 				}
 				
 				case 4:{
+					System.out.println(v.mostrarTodo());
 					
 					break ciclo2;
 				}
