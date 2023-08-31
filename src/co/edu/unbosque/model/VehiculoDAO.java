@@ -40,7 +40,7 @@ public class VehiculoDAO implements OperacionesDAO{
 		
 		try {
 			vehiculos.add(new VehiculoDTO(tipo, placa, horaEntrada));
-			salida = "\nVehiculo agregado corretamente :D";
+			salida = "\nVehiculo agregado, Tipo: "+tipo+ " Placa: "+placa+" Hora de ingreso: "+ horaEntrada;
 		} catch (Exception e) {
 			salida = "\nHizo algo mal chino mk, intente de nuevo";
 		}
@@ -72,8 +72,15 @@ public class VehiculoDAO implements OperacionesDAO{
 
 	@Override
 	public String mostrarTodo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		String salida = "";
+
+		for (int i = 0; i < vehiculos.size(); i++) {
+
+			salida += vehiculos.toString();
+
+		}
+		return salida;
+	
+}
 
 }
