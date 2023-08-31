@@ -38,8 +38,7 @@ public class Controller implements ActionListener {
 		switch (e.getActionCommand()) {
 		case "Agregar":{
 			
-			
-			
+
 			break;
 		}
 		case "Actualizar":{
