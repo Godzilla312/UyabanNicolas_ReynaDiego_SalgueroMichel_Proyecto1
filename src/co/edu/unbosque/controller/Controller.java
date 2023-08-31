@@ -3,15 +3,18 @@ package co.edu.unbosque.controller;
 import java.util.Scanner;
 
 import co.edu.unbosque.model.VehiculoDAO;
+import co.edu.unbosque.view.MenuVista;
 
 public class Controller {
 
 	private VehiculoDAO v;
 	private Scanner sc;
+	private MenuVista mv;
 
 	public Controller() {
 		v = new VehiculoDAO();
 		sc = new Scanner(System.in);
+		mv = new MenuVista();
 	}
 	
 	public void run() {
